@@ -1,5 +1,6 @@
 # Time Is Money
 Determine what your cash flows need to look like to pay for anything using cash!
+Check out the app [here](https://chumomega.github.io/timeismoney/)
 
 ### Deploy app to Gituhb Pages
  - Run `npm run deploy`
