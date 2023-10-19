@@ -2,14 +2,14 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-function SaveSingleYearPurchase() {
+function DontSaveMultiYearPurchase() {
   return (
     <div>
-      <Typography variant="h6" gutterBottom>Save Money For A Single Year Purchase</Typography>
+      <Typography variant="h6" gutterBottom>I Have Money For A Multi Year Purchase</Typography>
       <Typography variant="body1" gutterBottom>
-        If I save X dollars every month, how long will it take me 
-        to buy something that costs A dollars in B months? 
-        The interest rate is C%.
+        If I leave X dollars alone, how long will it take me to buy 
+        something that costs A dollars every month for B months starting 
+        D months from now? The interest rate is C%.
       </Typography>
       <br/>
       <Button variant="outlined">Submit</Button>
@@ -21,4 +21,4 @@ function SaveSingleYearPurchase() {
   );
 }
 
-export default SaveSingleYearPurchase;
+export default DontSaveMultiYearPurchase;

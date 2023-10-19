@@ -54,7 +54,7 @@ function LandingPage() {
             <FormControlLabel value="b" control={<Radio />} label="I have the money" />
           </RadioGroup>
           <br/>
-          <Button variant="outlined" type="submit">Submit</Button>
+          <Button variant="outlined" type="submit">Next</Button>
         </FormControl>
       </form>
 
