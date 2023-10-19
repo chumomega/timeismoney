@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.js": "/timeismoney/static/js/main.19e6ce39.chunk.js",
+    "main.js.map": "/timeismoney/static/js/main.19e6ce39.chunk.js.map",
+    "runtime~main.js": "/timeismoney/static/js/runtime~main.dd0d96c3.js",
+    "runtime~main.js.map": "/timeismoney/static/js/runtime~main.dd0d96c3.js.map",
+    "static/css/2.0a6cee14.chunk.css": "/timeismoney/static/css/2.0a6cee14.chunk.css",
+    "static/js/2.5432d886.chunk.js": "/timeismoney/static/js/2.5432d886.chunk.js",
+    "static/js/2.5432d886.chunk.js.map": "/timeismoney/static/js/2.5432d886.chunk.js.map",
+    "static/js/3.cabcfef1.chunk.js": "/timeismoney/static/js/3.cabcfef1.chunk.js",
+    "static/js/3.cabcfef1.chunk.js.map": "/timeismoney/static/js/3.cabcfef1.chunk.js.map",
+    "index.html": "/timeismoney/index.html",
+    "precache-manifest.814dbf8e094babf2e2a890b9647d1978.js": "/timeismoney/precache-manifest.814dbf8e094babf2e2a890b9647d1978.js",
+    "service-worker.js": "/timeismoney/service-worker.js",
+    "static/css/2.0a6cee14.chunk.css.map": "/timeismoney/static/css/2.0a6cee14.chunk.css.map",
+    "static/media/300.css": "/timeismoney/static/media/roboto-vietnamese-300-normal.48c684d9.woff2",
+    "static/media/400.css": "/timeismoney/static/media/roboto-vietnamese-400-normal.ca3b09b6.woff2",
+    "static/media/500.css": "/timeismoney/static/media/roboto-vietnamese-500-normal.8d5980bf.woff",
+    "static/media/700.css": "/timeismoney/static/media/roboto-vietnamese-700-normal.cdaab836.woff2"
+  }
+}
