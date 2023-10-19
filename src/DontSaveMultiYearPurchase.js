@@ -25,7 +25,7 @@ function DontSaveMultiYearPurchase() {
       <Button variant="outlined">Submit</Button>
       <br/><br/>
       <Typography variant="body1" gutterBottom>
-        ...It will take you <Input value={answer} required={true}/> months.
+        ...It will take you {answer} months.
       </Typography>
     </div>
   );

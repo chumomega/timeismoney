@@ -11,6 +11,7 @@ function DontSaveSingleYearPurchase() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    // manual nper calculation https://www.reddit.com/r/learnmath/comments/isejs0/excel_nper_calculations_manually/
     let periodicRate = (apr / 100) / 12
 
     let x = Math.log(totalCost / totalDollars)

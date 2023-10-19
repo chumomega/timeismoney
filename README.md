@@ -12,3 +12,6 @@ Check out the app [here](https://chumomega.github.io/timeismoney/)
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### Contribute to this app
+ - Check out [this documentation to fork the repo and create a pull request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
