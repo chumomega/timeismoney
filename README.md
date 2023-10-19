@@ -15,3 +15,6 @@ You may also see any lint errors in the console.
 
 ### Contribute to this app
  - Check out [this documentation to fork the repo and create a pull request](https://docs.github.com/en/get-started/quickstart/contributing-to-projects).
+
+### Initial Mockups
+![alt text](https://github.com/chumomega/timeismoney/blob/main/IMG_5883.PNG?raw=true)
