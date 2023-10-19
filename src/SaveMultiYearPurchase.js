@@ -14,7 +14,7 @@ function SaveMultiYearPurchase() {
   return (
     <div>
       <Typography variant="h6" gutterBottom>Save Money For A Multi Year Purchase</Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" component={'span'} gutterBottom>
         How much do I need to save per month for <Input value={numMonthsSaving} required={true}/> months to afford something 
         that costs <Input value={dollarsPerMonth} required={true}/> dollars every month for <Input value={numMonthsSpending} required={true}/> 
         months starting <Input value={numMonthsSpendingDelayed} required={true}/> months 

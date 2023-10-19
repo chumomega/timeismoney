@@ -12,7 +12,7 @@ function DontSaveSingleYearPurchase() {
   return (
     <div>
       <Typography variant="h6" gutterBottom>I Have Money For A Single Year Purchase</Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" component={'span'} gutterBottom>
         If I leave <Input value={totalDollars} required={true}/> dollars alone, how long will it take me 
         to buy something that costs <Input value={totalCost} required={true}/> dollars? 
         The annual percentage rate (APR) is <Input value={apr} required={true}/>%.

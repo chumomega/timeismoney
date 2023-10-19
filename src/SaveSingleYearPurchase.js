@@ -6,26 +6,31 @@ import Input from '@mui/material/Input';
 function SaveSingleYearPurchase() {
   const [dollarsPerMonth, setDollarsPerMonth] = React.useState(50);
   const [totalCost, setTotalCost] = React.useState(5000);
-  const [numMonths, setNumMonths] = React.useState(10);
   const [apr, setAPR] = React.useState(10);
-  const [answer, setAnswer] = React.useState(0);
+  const [answer, setAnswer] = React.useState('?');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`${dollarsPerMonth * totalCost}`)
+    let periodicRate = (apr / 100) / 12
+
+    let x = Math.log((-1*dollarsPerMonth/periodicRate - totalCost) / (-1*dollarsPerMonth/periodicRate))
+    let y = Math.log(1 + periodicRate)
+
+    setAnswer(x/y)
   };
 
   return (
     <div>
       <form onSubmit={handleSubmit}>
         <Typography variant="h6" gutterBottom>Save Money For A Single Year Purchase</Typography>
-        <Typography variant="body1" gutterBottom>
-          If I save <Input value={dollarsPerMonth} required={true}/> dollars every month, how long will it take me
-          to buy something that costs <Input value={totalCost} required={true}/> dollars in <Input value={numMonths} required={true}/> months?
-          The annual percentage rate (APR) is <Input value={apr} required={true}/>%.
+        <Typography variant="body1" component={'span'} gutterBottom>
+          If I save <Input value={dollarsPerMonth} required={true} onChange={(event) => {setDollarsPerMonth(event.target.value)}}/> dollars
+          every month, how long will it take me to buy something that
+          costs <Input value={totalCost} required={true} onChange={(event) => {setTotalCost(event.target.value)}}/> dollars?
+          The annual percentage rate (APR) is <Input value={apr} required={true} onChange={(event) => {setAPR(event.target.value)}}/>%.
         </Typography>
         <br/>
-        <Button variant="outlined">Submit</Button>
+        <Button variant="outlined" type="submit">Submit</Button>
         <br/>
         <br/>
         <Typography variant="body1" gutterBottom>

@@ -14,7 +14,7 @@ function DontSaveMultiYearPurchase() {
   return (
     <div>
       <Typography variant="h6" gutterBottom>I Have Money For A Multi Year Purchase</Typography>
-      <Typography variant="body1" gutterBottom>
+      <Typography variant="body1" component={'span'} gutterBottom>
         If I leave <Input value={totalDollars} required={true}/> dollars alone, how long will it take me to buy 
         something that costs <Input value={dollarsPerMonth} required={true}/> dollars every month 
         for <Input value={numMonthsSpending} required={true}/> months 
