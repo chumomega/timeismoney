@@ -23,7 +23,7 @@ function LandingPage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate(`/${purchaseType}${savingType}`);
+    navigate(`/timeismoney/${purchaseType}${savingType}`);
   };
 
   return (

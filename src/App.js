@@ -14,11 +14,11 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<LandingPage/>} />
-          <Route path="/aa" element={<SaveSingleYearPurchase/>} />
-          <Route path="/ab" element={<DontSaveSingleYearPurchase/>} />
-          <Route path="/ba" element={<SaveMultiYearPurchase/>} />
-          <Route path="/bb" element={<DontSaveMultiYearPurchase/>} />
+          <Route path="/timeismoney/" element={<LandingPage/>} />
+          <Route path="/timeismoney/aa" element={<SaveSingleYearPurchase/>} />
+          <Route path="/timeismoney/ab" element={<DontSaveSingleYearPurchase/>} />
+          <Route path="/timeismoney/ba" element={<SaveMultiYearPurchase/>} />
+          <Route path="/timeismoney/bb" element={<DontSaveMultiYearPurchase/>} />
         </Routes>
       </BrowserRouter>
     </div>
