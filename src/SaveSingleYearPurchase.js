@@ -30,6 +30,7 @@ function SaveSingleYearPurchase() {
           The annual percentage rate (APR) is <Input value={apr} required={true} onChange={(event) => {setAPR(event.target.value)}}/>%.
         </Typography>
         <br/>
+        <br/>
         <Button variant="outlined" type="submit">Submit</Button>
         <br/>
         <br/>
