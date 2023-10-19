@@ -2,6 +2,7 @@ import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Input from '@mui/material/Input';
+import HomeIcon from './HomeIcon';
 
 function DontSaveSingleYearPurchase() {
   const [totalDollars, setTotalDollars] = React.useState(5000);
@@ -22,6 +23,7 @@ function DontSaveSingleYearPurchase() {
 
   return (
     <div>
+      <HomeIcon />
       <form onSubmit={handleSubmit}>
         <Typography variant="h6" gutterBottom>I Have Money For A Single Year Purchase</Typography>
         <Typography variant="body1" component={'span'} gutterBottom>
