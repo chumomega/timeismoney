@@ -6,38 +6,49 @@ import HomeIcon from './HomeIcon';
 
 function SaveMultiYearPurchase() {
   const [dollarsPerMonth, setDollarsPerMonth] = React.useState(50);
-  const [numMonthsSaving, setNumMonthsSaving] = React.useState(20);
   const [numMonthsSpending, setNumMonthsSpending] = React.useState(10);
   const [numMonthsSpendingDelayed, setNumMonthsSpendingDelayed] = React.useState(10);
   const [apr, setAPR] = React.useState(10);
-  const [answer, setAnswer] = React.useState(0);
+  const [answer, setAnswer] = React.useState("?");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // let periodicRate = (apr / 100) / 12
+    let periodicRate = (apr / 100) / 12
 
-    // let x = Math.log((-1*dollarsPerMonth/periodicRate - totalCost) / (-1*dollarsPerMonth/periodicRate))
-    // let y = Math.log(1 + periodicRate)
+    // Future Value of an Annuity =C (( (1+i)^n - 1 ) / i), where C is the regular payment, i is the annual interest rate or discount rate in decimal, and n is the number of years or periods
+    let fv_of_costs = dollarsPerMonth * ((Math.pow((1+periodicRate), numMonthsSpending) - 1) / periodicRate)
+    console.log(`fv_of_costs is ${fv_of_costs}`)
 
-    // setAnswer(x/y)
+    let num_periods_saving = Number(numMonthsSpending) + Number(numMonthsSpendingDelayed)
+    console.log(`num_periods_saving is ${num_periods_saving}`)
+
+    let denom = (Math.pow((1+periodicRate), num_periods_saving) - 1) / periodicRate
+    console.log(`denom is ${denom}`)
+    let amt_to_save = fv_of_costs / denom
+
+    setAnswer(amt_to_save)
   };
 
   return (
     <div>
       <HomeIcon />
-      <Typography variant="h6" gutterBottom>Save Money For A Multi Year Purchase</Typography>
-      <Typography variant="body1" component={'span'} gutterBottom>
-        How much do I need to save per month for <Input value={numMonthsSaving} required={true}/> months to afford something 
-        that costs <Input value={dollarsPerMonth} required={true}/> dollars every month for <Input value={numMonthsSpending} required={true}/> 
-        months starting <Input value={numMonthsSpendingDelayed} required={true}/> months 
-        from now? The annual percentage rate (APR) is <Input value={apr} required={true}/>%.
-      </Typography>
-      <br/>
-      <Button variant="outlined">Submit</Button>
-      <br/><br/>
-      <Typography variant="body1" gutterBottom>
-        ...{answer} dollars per month.
-      </Typography>
+      <form onSubmit={handleSubmit}>
+        <Typography variant="h6" gutterBottom>Save Money For A Multi Year Purchase</Typography>
+        <Typography variant="body1" component={'span'} gutterBottom>
+          How much do I need to save per month to afford something 
+          that costs <Input value={dollarsPerMonth} type="number" required={true} onChange={(event) => {setDollarsPerMonth(event.target.value)}}/>
+          dollars every month for <Input value={numMonthsSpending} type="number" required={true} onChange={(event) => {setNumMonthsSpending(event.target.value)}}/> 
+          months. I have <Input value={numMonthsSpendingDelayed} type="number" required={true} onChange={(event) => {setNumMonthsSpendingDelayed(event.target.value)}}/>
+          months before I need to start making the payments.
+          The annual percentage rate (APR) is <Input value={apr} type="number" required={true} onChange={(event) => {setAPR(event.target.value)}}/>%.
+        </Typography>
+        <br/>
+        <Button variant="outlined" type="submit">Submit</Button>
+        <br/><br/>
+        <Typography variant="body1" gutterBottom>
+          ...{answer} dollars per month.
+        </Typography>
+      </form>
     </div>
   );
 }
