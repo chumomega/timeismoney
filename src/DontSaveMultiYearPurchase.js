@@ -10,7 +10,7 @@ function DontSaveMultiYearPurchase() {
   const [numMonthsSpending, setNumMonthsSpending] = React.useState(10);
   const [numMonthsSpendingDelayed, setNumMonthsSpendingDelayed] = React.useState(10);
   const [apr, setAPR] = React.useState(10);
-  const [answer, setAnswer] = React.useState(0);
+  const [answer, setAnswer] = React.useState("?");
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,8 +29,8 @@ function DontSaveMultiYearPurchase() {
       <Typography variant="body1" component={'span'} gutterBottom>
         If I leave <Input value={totalDollars} required={true}/> dollars alone, how long will it take me to buy 
         something that costs <Input value={dollarsPerMonth} required={true}/> dollars every month 
-        for <Input value={numMonthsSpending} required={true}/> months 
-        starting <Input value={numMonthsSpendingDelayed} required={true}/> months from now?
+        for <Input value={numMonthsSpending} required={true}/> months?
+        Assume that I'm saving this amount during the time I'm spending.
         The annual percentage rate (APR) is <Input value={apr} required={true}/>%.
       </Typography>
       <br/>
